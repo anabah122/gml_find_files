@@ -2,6 +2,15 @@
 
 
 
+function len( arg ){
+	var known_types =["string","array"]
+	if ( !array_contains(known_types, typeof(arg)) ) return noone
+	
+	if( typeof(arg)=="string" ) return string_length(arg)
+	if( typeof(arg)=="array"  ) return array_length(arg)
+}
+
+
 
 function find_files( path, mask="", demask="" )
 {
