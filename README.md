@@ -6,5 +6,5 @@
 ## typical usage:
 #### path = get_string("path to you asset folder","")+@"\"
 #### if( directory_exists( path ))
-####    asset_list= find_files( path )
+####    asset_list= find_files( path ) // array of files paths
   
