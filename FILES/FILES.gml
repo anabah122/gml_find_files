@@ -6,7 +6,7 @@
 function find_files( path, mask="", demask="" )
 {
 	
-	start = current_time
+	start_time = current_time
 	
 	util_folders=[]
 	util_files	=[]
@@ -46,7 +46,7 @@ function find_files( path, mask="", demask="" )
 		array_delete(util_folders,0,1)
 	}
 	
-	log(string("elapsed time: {0}",current_time-start))
+	log(string("elapsed time: {0}",current_time-start_time))
 	
 	return util_files
 }
