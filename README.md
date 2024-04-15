@@ -4,7 +4,7 @@ redefined and new functions in macro file
 
 DISABLE FILE SYSTEM SANDBOX !!!
 
-//USE
+typical usage:
 path = get_string("path to you asset folder","")+@"\"
 if( directory_exists( path ))
   asset_list= find_files( path )
