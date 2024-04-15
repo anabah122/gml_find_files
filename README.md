@@ -2,9 +2,9 @@ the function from the FILES file will find all files in folders and subfolders o
 redefined and new functions in macro file
 
 
-DISABLE FILE SYSTEM SANDBOX !!!
+##DISABLE FILE SYSTEM SANDBOX !!!
 
-typical usage:
+#typical usage:
 path = get_string("path to you asset folder","")+@"\"
 if( directory_exists( path ))
   asset_list= find_files( path )
