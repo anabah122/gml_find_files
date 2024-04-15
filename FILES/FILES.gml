@@ -1,5 +1,3 @@
-/// @description FILES FINDER
-
 
 
 function len( arg ){
@@ -24,6 +22,7 @@ function find_files( path, mask="", demask="" )
 	var list_files = function( path , mask, demask )
 	{
 		var file_name = file_find_first(path+"*", fa_directory);
+		log(file_name)
 	
 		while (file_name != "")
 		{
@@ -63,9 +62,9 @@ function find_files( path, mask="", demask="" )
 
 
 
+then 
 
-
-
-
-
+#macro log show_debug_message
+path = @"C:\world"+@"\"  # @"\" if you do not add a path, there will be no path to the folder
+log( len( find_files(path) ) )
 
