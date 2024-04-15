@@ -1,8 +1,4 @@
 
-function normalize_path(path){
-	return string_replace(path,"\"","/")+@""
-}
-
 function len( arg ){
 	var known_types =["string","array"]
 	if ( !array_contains(known_types, typeof(arg)) ) return noone
