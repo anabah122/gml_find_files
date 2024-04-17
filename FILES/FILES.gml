@@ -59,10 +59,7 @@ function find_files( path, mask="", demask="" )
 	return util_files
 }
 
-
-
-
-then 
+ 
 
 #macro log show_debug_message
 path = @"C:\world"+@"\"  // if you do not add at path @"\" at end, there will be no path to the folder
