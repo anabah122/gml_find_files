@@ -1,4 +1,4 @@
-
+#macro log show_debug_message
 
 function len( arg ){
 	var known_types =["string","array"]
@@ -16,7 +16,7 @@ function find_files( path, mask="", demask="" )
 	start_time = current_time
 	
 	util_folders=[]
-	util_files	=[]
+	util_files=[]
 
 
 	var list_files = function( path , mask, demask )
@@ -61,7 +61,6 @@ function find_files( path, mask="", demask="" )
 
  
 
-#macro log show_debug_message
 path = @"C:\world"+@"\"  // if you do not add at path @"\" at end, there will be no path to the folder
 log( len( find_files(path) ) )
 
