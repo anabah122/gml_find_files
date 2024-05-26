@@ -38,17 +38,13 @@ function find_files( path, mask="", demask="" )
 	
 	
 	list_files(path, mask, demask)
-	while len(util_folders)
+	while array_length(util_folders)
 	{
 		list_files(util_folders[0], mask, demask)
 		array_delete(util_folders,0,1)
 	}
 	
-	log(string("elapsed time: {0}",current_time-start_time))
+	//log(string("elapsed time: {0}",current_time-start_time))
 	
 	return util_files
 }
-
-path = @"C:\world"+@"\"  // if you do not add at path @"\" at end, there will be no path to the folder
-log( len( find_files(path) ) )
-
