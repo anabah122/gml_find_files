@@ -1,5 +1,7 @@
 #macro log show_debug_message
 
+
+
 function find_files( path, mask="", demask="" )
 {
 	
@@ -12,7 +14,7 @@ function find_files( path, mask="", demask="" )
 	var list_files = function( path , mask, demask )
 	{
 		var file_name = file_find_first(path+"*", fa_directory);
-		log(file_name)
+		//slog(file_name)
 	
 		while (file_name != "")
 		{
@@ -48,3 +50,4 @@ function find_files( path, mask="", demask="" )
 	
 	return util_files
 }
+
