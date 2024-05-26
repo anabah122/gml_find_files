@@ -1,15 +1,5 @@
 #macro log show_debug_message
 
-function len( arg ){
-	var known_types =["string","array"]
-	if ( !array_contains(known_types, typeof(arg)) ) return noone
-	
-	if( typeof(arg)=="string" ) return string_length(arg)
-	if( typeof(arg)=="array"  ) return array_length(arg)
-}
-
-
-
 function find_files( path, mask="", demask="" )
 {
 	
@@ -29,12 +19,12 @@ function find_files( path, mask="", demask="" )
 			
 			if( string_count(".",file_name) ) 
 			{
-				if( len(mask) and !len(demask) and string_count(mask,file_name) ) 
+				if( string_length(mask) and !string_length(demask) and string_count(mask,file_name) ) 
 					array_push( util_files, path+file_name);
-				if( len(mask) and len(demask) and string_count(mask,file_name) and !string_count(demask,file_name) ) 
+				if( string_length(mask) and string_length(demask) and string_count(mask,file_name) and !string_count(demask,file_name) ) 
 					array_push( util_files, path+file_name);
 				
-				if( !len(mask) )
+				if( !string_length(mask) )
 					array_push( util_files, path+file_name);	
 			}
 			else 
@@ -58,8 +48,6 @@ function find_files( path, mask="", demask="" )
 	
 	return util_files
 }
-
- 
 
 path = @"C:\world"+@"\"  // if you do not add at path @"\" at end, there will be no path to the folder
 log( len( find_files(path) ) )
